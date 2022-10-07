@@ -6,7 +6,6 @@
     height: 600px;
     border-radius: 5px;
 }
-
 @mixin contenedor-titulos{
     width: 100%;
     height: 40px;
@@ -15,14 +14,12 @@
     text-align: center;
     backdrop-filter: blur(2px);
 }
-
 @mixin titulos-proyecto{
     color:$color4;
     font-size: 26px;
     padding: 1px;
     font-family: 'Saira Semi Condensed', sans-serif;
 }
-
 @mixin pie-proyecto{
     text-align: center;
     margin-top: 550px;
@@ -31,6 +28,7 @@
     border-radius: 5px;
 }
 
+// Titulos de paginas 
 @mixin subtitulos-paginas ($Width, $height) {
     background-color: $color3;
     width: $Width;
@@ -43,8 +41,8 @@
     text-align: center;
     font-family: $fuente-bold;
 }
-
-@mixin ajuste-img {
+// Ajustes imagenes - proyecto
+@mixin ajuste-img{
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;

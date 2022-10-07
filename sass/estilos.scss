@@ -2,6 +2,7 @@
 
 @import "utilities/variables";
 @import "utilities/mixis";
+@import "utilities/proyecto.scss";
 
 
 header{
@@ -181,34 +182,6 @@ header{
 }
 
 // Quienes Somos
-.body-somos{
-    background-color: $color2;
-    h1{
-        @include subtitulos-paginas (15%, 5%)
-    }
-    .contenedor-somos{
-        background-color: $color2;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        div{
-            background-color: $color1;
-            width: 80%;
-            height: 960px;
-            margin: 0 auto;
-            border-color: black;
-            border-style: dashed;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            p{
-                text-align: center;
-                margin: 10px;
-                color: $color4;
-            }
-        }
-    }
-}
 
 //Contacto
 .body-contacto{
@@ -255,102 +228,3 @@ footer{
     }
 }
 
-@media (max-width:1210px){
-    header{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-        div{
-            width: 100%;
-            height: 100%;
-            justify-content: center;
-            img{
-                width: 90%;
-                height: auto;
-                margin-top: 5px;
-            }
-        }
-        nav{
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            height: 100%;
-            border-radius: 0px;
-            
-            ul{
-                width: 100%;
-                height: auto;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                border-radius:0px;
-            }
-        }
-    }
-    .proyecto-padre{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 50%;
-        section{
-            width: 90%;
-            height: 40%;
-            margin-bottom: 10px;
-            p{
-            margin-top: 70%;
-            }
-        }
-    }
-}
-
-// Proyectos
-@media screen and (max-width:400px){
-    .contenedor-inicio
-    section{
-        width: 80%;
-    }
-}
-@media screen and (max-width:400px){
-    .proyecto-padre{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 50%;
-        section{
-            width: 90%;
-            height: 40%;
-            margin-bottom: 10px;
-            p{
-            margin-top: 70%;
-            }
-        }
-    }
-}
-
-// Steel Framming
-@media screen and (max-width:400px){
-    .cotenedor-steel{
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        padding: 0px 10px 0px 10px;
-        margin-bottom: 5%;
-    }
-}.titulo-steelframing{
-    width: 80%;
-}
-
-// Contacto
-@media screen and (max-width:400px){
-    .formulario{
-        width: 100%;
-        margin-top: 5%;
-        margin-bottom: 5%;
-        height: 60%;
-        }
-        .titulo-formulario{
-            width: 90%;
-            font-size: 20px;
-        }    
-}
