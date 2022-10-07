@@ -50,6 +50,28 @@ header{
         }
     }
 }
+.li.animacion{
+    position: relative;
+}
+.link:after{
+    align-items: center;
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: 5px;
+    background-color: #F7F7F7;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transition: all .5s;
+    will-change: width;
+}
+
+.link:hover::after{
+    width: 100%;
+    right: 0;
+}
+
 
 
 .body-inicio{
@@ -74,7 +96,6 @@ header{
 }
 
 // Proyectos
-
 .body-proyecto{
     background-color: $color2;
     .titulo-proyectos{
@@ -115,7 +136,6 @@ header{
 }
 
 // Steel Framming
-
 .body-steel{
     background-color: $color2;
     h1{
@@ -161,7 +181,6 @@ header{
 }
 
 // Quienes Somos
-
 .body-somos{
     background-color: $color2;
     h1{
@@ -192,7 +211,6 @@ header{
 }
 
 //Contacto
-
 .body-contacto{
     background-color: $color2;
     height: 100%;
@@ -204,7 +222,7 @@ header{
         }
         .formulario{
             background-color: $color4;
-            width: 30%;
+            width: 50%;
             height: 80% ;
             padding: 20px;
             margin: auto;
@@ -237,7 +255,7 @@ footer{
     }
 }
 
-@media (max-width:400px){
+@media (max-width:1210px){
     header{
         display: flex;
         flex-direction: column;
@@ -273,12 +291,52 @@ footer{
 }
 
 // Proyectos
-
-@media screen and (max-width: 780px){
+@media screen and (max-width:400px){
+    .contenedor-inicio
+    section{
+        width: 80%;
+    }
+}
+@media screen and (max-width:400px){
     .proyecto-padre{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        align-items: center;
+        margin-bottom: 50%;
+        section{
+            width: 90%;
+            height: 40%;
+            margin-bottom: 10px;
+            p{
+            margin-top: 70%;
+            }
+        }
     }
-    
+}
+
+// Steel Framming
+@media screen and (max-width:400px){
+    .cotenedor-steel{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0px 10px 0px 10px;
+        margin-bottom: 5%;
+    }
+}.titulo-steelframing{
+    width: 80%;
+}
+
+// Contacto
+@media screen and (max-width:400px){
+    .formulario{
+        width: 100%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        height: 60%;
+        }
+        .titulo-formulario{
+            width: 90%;
+            font-size: 20px;
+        }    
 }
