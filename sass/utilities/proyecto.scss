@@ -1,29 +1,48 @@
-
-.body-somos{
+.body-proyecto{
     background-color: $color2;
-    h1{
-        @include subtitulos-paginas (15%, 5%)
+    .titulo-proyectos{
+        @include subtitulos-paginas (10%, 10%)
     }
-    .contenedor-somos{
-        background-color: $color2;
+    .proyecto-padre{
         width: 100%;
         height: 100%;
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 3fr 1fr;
         justify-content: center;
-        div{
-            background-color: $color1;
-            width: 80%;
-            height: 960px;
-            margin: 0 auto;
-            border-color: black;
-            border-style: dashed;
-            border-radius: 10px;
-            margin-bottom: 20px;
+        grid-template-areas: 
+        "header"
+        "titulo-proyectos"
+        "contenedor-section"
+        "footer";
+        .proyecto-1{
+            background-image: url(../img/img-proyecto/proyecto-1.jpg);
+            @include ajuste-img;
+        }
+        .proyecto-2{
+            background-image: url(../img/img-proyecto/proyecto-2.jpg);
+            @include ajuste-img;
+        }
+        .proyecto-3 {
+            background-image: url(../img/img-proyecto/proyecto-3.jpg);
+            @include ajuste-img
+        }
+        section{ // caja de proyectos
+            @include cajas-proyecto;
+            .sub-proyecto{
+                @include contenedor-titulos;
+                h2{
+                    @include titulos-proyecto;
+                }
+            }
             p{
-                text-align: center;
-                margin: 10px;
-                color: $color4;
+                @include pie-proyecto;
             }
         }
     }
+}
+
+.contenedor-section{
+    width: 100%;
+    height: 800px;
 }
